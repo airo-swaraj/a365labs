@@ -1,0 +1,35 @@
+<!-- OPTION 3: Stacked Squares with Office Colors -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="grad3a" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0052a3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad3b" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00a4ef;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0066cc;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow3">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  
+  <!-- 3 Stacked squares (representing Office apps) -->
+  <!-- Top square -->
+  <rect x="65" y="50" width="35" height="35" rx="6" fill="url(#grad3a)" filter="url(#shadow3)"/>
+  
+  <!-- Middle square (offset right) -->
+  <rect x="80" y="72" width="35" height="35" rx="6" fill="url(#grad3b)" filter="url(#shadow3)"/>
+  
+  <!-- Bottom square (offset right again) -->
+  <rect x="95" y="94" width="35" height="35" rx="6" fill="url(#grad3a)" opacity="0.9" filter="url(#shadow3)"/>
+  
+  <!-- White grid pattern inside squares -->
+  <circle cx="77" cy="62" r="2.5" fill="white" opacity="0.8"/>
+  <circle cx="85" cy="70" r="2.5" fill="white" opacity="0.8"/>
+  <circle cx="93" cy="70" r="2.5" fill="white" opacity="0.8"/>
+  <circle cx="107" cy="106" r="2.5" fill="white" opacity="0.8"/>
+  
+  <!-- 365 text below -->
+  <text x="100" y="165" font-family="'Arial', sans-serif" font-size="30" font-weight="800" fill="url(#grad3a)" text-anchor="middle">365</text>
+</svg>

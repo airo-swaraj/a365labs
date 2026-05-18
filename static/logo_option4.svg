@@ -1,0 +1,43 @@
+<!-- OPTION 4: House with Diagonal Split (Office 365 Modern) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="grad4a" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0052a3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad4b" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0077ff;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow4">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  
+  <!-- Roof -->
+  <polygon points="100,45 155,95 45,95" fill="url(#grad4a)" filter="url(#shadow4)"/>
+  
+  <!-- House base - split diagonal -->
+  <rect x="50" y="95" width="100" height="65" rx="8" fill="url(#grad4a)" opacity="0.2"/>
+  
+  <!-- Left side darker -->
+  <polygon points="50,95 100,95 100,160 50,160" fill="url(#grad4a)" opacity="0.85" filter="url(#shadow4)"/>
+  
+  <!-- Right side lighter (accent) -->
+  <polygon points="100,95 150,95 150,160 100,160" fill="url(#grad4b)" opacity="0.75" filter="url(#shadow4)"/>
+  
+  <!-- Windows pattern -->
+  <rect x="60" y="110" width="12" height="12" fill="white" opacity="0.8"/>
+  <rect x="78" y="110" width="12" height="12" fill="white" opacity="0.8"/>
+  <rect x="60" y="132" width="12" height="12" fill="white" opacity="0.8"/>
+  <rect x="78" y="132" width="12" height="12" fill="white" opacity="0.8"/>
+  
+  <rect x="108" y="110" width="12" height="12" fill="white" opacity="0.7"/>
+  <rect x="126" y="110" width="12" height="12" fill="white" opacity="0.7"/>
+  <rect x="108" y="132" width="12" height="12" fill="white" opacity="0.7"/>
+  <rect x="126" y="132" width="12" height="12" fill="white" opacity="0.7"/>
+  
+  <!-- 365 with split colors -->
+  <text x="85" y="180" font-family="'Arial', sans-serif" font-size="26" font-weight="800" fill="url(#grad4a)" text-anchor="end">3</text>
+  <text x="115" y="180" font-family="'Arial', sans-serif" font-size="26" font-weight="800" fill="url(#grad4b)" text-anchor="start">65</text>
+</svg>

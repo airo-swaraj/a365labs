@@ -1,0 +1,41 @@
+<!-- OPTION 1: House with Office Grid - Final Design -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0052a3;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow1">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Office-inspired color circles at top (representing Office 365 apps) -->
+  <circle cx="70" cy="25" r="6" fill="#0066cc" opacity="0.9"/>
+  <circle cx="85" cy="20" r="6" fill="#0077ff" opacity="0.85"/>
+  <circle cx="100" cy="18" r="6" fill="#00d4ff" opacity="0.8"/>
+  <circle cx="115" cy="20" r="6" fill="#0077ff" opacity="0.85"/>
+  <circle cx="130" cy="25" r="6" fill="#0066cc" opacity="0.9"/>
+  
+  <!-- Connecting line -->
+  <line x1="60" y1="35" x2="140" y2="35" stroke="url(#grad1)" stroke-width="1.5" opacity="0.3"/>
+  
+  <!-- Roof (triangle) centered -->
+  <polygon points="100,50 150,95 50,95" fill="url(#grad1)" filter="url(#shadow1)"/>
+  
+  <!-- House base -->
+  <rect x="50" y="95" width="100" height="65" rx="8" fill="url(#grad1)" opacity="0.85" filter="url(#shadow1)"/>
+  
+  <!-- Office grid window (2x2) inside house - centered -->
+  <rect x="65" y="110" width="14" height="14" fill="white" opacity="0.9"/>
+  <rect x="85" y="110" width="14" height="14" fill="white" opacity="0.8"/>
+  <rect x="65" y="130" width="14" height="14" fill="white" opacity="0.8"/>
+  <rect x="85" y="130" width="14" height="14" fill="white" opacity="0.9"/>
+  
+  <!-- Door -->
+  <rect x="104" y="140" width="18" height="20" rx="2" fill="#0052a3" opacity="0.7"/>
+  <circle cx="120" cy="150" r="1.5" fill="white" opacity="0.6"/>
+  
+  <!-- a365labs text below -->
+  <text x="100" y="175" font-family="'Arial', 'sans-serif'" font-size="14" font-weight="800" fill="url(#grad1)" text-anchor="middle" letter-spacing="0.5">a365labs</text>
+</svg>

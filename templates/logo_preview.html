@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a365labs Logo Options</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #1a1a2e;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+        }
+        
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .logo-option {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 102, 204, 0.15);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+            text-align: center;
+            cursor: pointer;
+            border: 3px solid transparent;
+        }
+        
+        .logo-option:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 40px 80px rgba(0, 102, 204, 0.25);
+            border-color: #0066cc;
+        }
+        
+        .logo-option.selected {
+            border-color: #0066cc;
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+        }
+        
+        .logo-display {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+            border-radius: 12px;
+            padding: 20px;
+        }
+        
+        .logo-display img {
+            max-width: 150px;
+            height: auto;
+        }
+        
+        .logo-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+        
+        .logo-description {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .select-btn {
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .select-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 102, 204, 0.3);
+        }
+        
+        .select-btn.active {
+            background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+        }
+        
+        .instructions {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 102, 204, 0.1);
+            border-left: 5px solid #0066cc;
+        }
+        
+        .instructions h2 {
+            color: #0066cc;
+            margin-bottom: 15px;
+        }
+        
+        .instructions p {
+            color: #666;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Choose Your a365labs Logo</h1>
+        
+        <div class="instructions">
+            <h2>Pick Your Favorite Design</h2>
+            <p>Click on any logo option below to preview it. Each design represents different aspects of our enterprise Office 365 and OS licensing business. Choose the one that best represents a365labs!</p>
+        </div>
+        
+        <div class="logo-grid">
+            <!-- Option 1 -->
+            <div class="logo-option" onclick="selectLogo(1)">
+                <div class="logo-display">
+                    <img src="/static/logo_option1.svg" alt="Option 1">
+                </div>
+                <div class="logo-title">Option 1: House with Office Grid</div>
+                <div class="logo-description">
+                    A traditional house design with an Office-style grid window pattern. Represents enterprise solutions and secure, organized infrastructure.
+                </div>
+                <button class="select-btn" id="btn1">Select Option 1</button>
+            </div>
+            
+            <!-- Option 2 -->
+            <div class="logo-option" onclick="selectLogo(2)">
+                <div class="logo-display">
+                    <img src="/static/logo_option2.svg" alt="Option 2">
+                </div>
+                <div class="logo-title">Option 2: Cloud Building</div>
+                <div class="logo-description">
+                    A modern cloud-based building with tall tower and windows. Perfect for representing cloud services, Office 365 online, and enterprise scalability.
+                </div>
+                <button class="select-btn" id="btn2">Select Option 2</button>
+            </div>
+            
+            <!-- Option 3 -->
+            <div class="logo-option" onclick="selectLogo(3)">
+                <div class="logo-display">
+                    <img src="/static/logo_option3.svg" alt="Option 3">
+                </div>
+                <div class="logo-title">Option 3: Stacked Squares</div>
+                <div class="logo-description">
+                    Abstract stacked squares in different gradients, inspired by Office app icons. Modern, dynamic, and represents multiple integrated services.
+                </div>
+                <button class="select-btn" id="btn3">Select Option 3</button>
+            </div>
+            
+            <!-- Option 4 -->
+            <div class="logo-option" onclick="selectLogo(4)">
+                <div class="logo-display">
+                    <img src="/static/logo_option4.svg" alt="Option 4">
+                </div>
+                <div class="logo-title">Option 4: Diagonal Split House</div>
+                <div class="logo-description">
+                    House with diagonal split design representing dual solutions (OS + Office 365). Modern, balanced, and symbolizes partnership and integration.
+                </div>
+                <button class="select-btn" id="btn4">Select Option 4</button>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 50px; color: #666;">
+            <p>💡 Selected option will be applied to your website when you confirm your choice!</p>
+        </div>
+    </div>
+    
+    <script>
+        function selectLogo(option) {
+            // Reset all buttons
+            for (let i = 1; i <= 4; i++) {
+                document.getElementById(`btn${i}`).classList.remove('active');
+                document.querySelectorAll('.logo-option')[i-1].classList.remove('selected');
+            }
+            
+            // Highlight selected
+            document.getElementById(`btn${option}`).classList.add('active');
+            document.getElementById(`btn${option}`).textContent = '✓ Selected!';
+            document.querySelectorAll('.logo-option')[option-1].classList.add('selected');
+            
+            // Store selection
+            localStorage.setItem('selectedLogo', option);
+            
+            console.log(`Logo option ${option} selected!`);
+        }
+    </script>
+</body>
+</html>
