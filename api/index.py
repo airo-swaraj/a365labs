@@ -1,13 +1,15 @@
 from flask import Flask, render_template, request, jsonify
 import os
 import sys
+from pathlib import Path
 
-# Add parent directory to path for imports
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Get the project root directory
+project_root = Path(__file__).parent.parent
+sys.path.insert(0, str(project_root))
 
 app = Flask(__name__, 
-            template_folder='../templates', 
-            static_folder='../static',
+            template_folder=str(project_root / 'templates'), 
+            static_folder=str(project_root / 'static'),
             static_url_path='')
 
 @app.route('/')
