@@ -140,7 +140,7 @@ body {
 .navbar {
     background-color: #f8f9fa;
     border-bottom: 2px solid var(--border-color);
-    padding: 1.2rem 0;
+    padding: 0.8rem 0;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -180,10 +180,10 @@ body {
 }
 
 .logo-img {
-    height: 40px;
-    width: 40px;
+    height: 140px;
+    width: auto;
     transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
-    filter: drop-shadow(0 2px 4px rgba(0, 102, 204, 0.2));
+    filter: drop-shadow(0 4px 8px rgba(0, 102, 204, 0.3));
     animation: logoFloat 3s ease-in-out infinite;
 }
 
@@ -201,46 +201,49 @@ body {
 }
 
 .logo-text {
-    font-size: 1.3rem;
-    color: var(--primary-color);
-    font-weight: bold;
-    background: linear-gradient(135deg, var(--primary-color) 0%, #0052a3 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    display: none;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 2.5rem;
+    gap: 1.5rem;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--text-dark);
     transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
-    font-weight: 500;
+    font-weight: 600;
     position: relative;
+    font-size: 1.05rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    background: rgba(0, 102, 204, 0.05);
 }
 
 .nav-links a::after {
     content: '';
     position: absolute;
-    bottom: -5px;
-    left: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 0;
-    height: 2px;
+    height: 3px;
     background: linear-gradient(135deg, var(--primary-color) 0%, #0052a3 100%);
     transition: width 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    border-radius: 2px;
 }
 
 .nav-links a:hover::after {
-    width: 100%;
+    width: 70%;
 }
 
 .nav-links a:hover {
     color: var(--primary-color);
+    background: rgba(0, 102, 204, 0.12);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 102, 204, 0.2);
 }
 
 /* Hero Section */
